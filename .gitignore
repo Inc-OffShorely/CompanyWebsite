@@ -1,0 +1,26 @@
+# Frontend / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+frontend/*.log
+frontend/.env
+frontend/.env.*
+
+# Backend / Java
+backend/target/
+backend/.mvn/
+backend/*.log
+backend/.env
+
+# DB/infra
+infra/.env
+*.sqlite*
+*.db
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
