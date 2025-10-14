@@ -1,4 +1,4 @@
-# My Website Project
+# Company Website
 
 Моно-репозиторий под фронт (React/JS), бэк (Java/Spring Boot + Security) и PostgreSQL.
 
