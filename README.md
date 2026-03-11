@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Company Website
+
+Моно-репозиторий под фронт (React/JS), бэк (Java/Spring Boot + Security) и PostgreSQL.
+
+## Структура
+- `frontend/` — клиентская часть
+- `backend/` — серверная часть API
+- `docs/` — документация и схемы
+
+## Правила
+1. Не коммить `.env` файлы — только `.env.example`.
+2. Работай через ветки.
+3. Ветку `main` не трогаем напрямую.
+>>>>>>> 271e29052ace927347f47a6adde635423e41c0d8
