@@ -1,0 +1,596 @@
+/* =============== Основной контент =============== */
+main {
+    padding: 40px 0;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.hero h3 {
+    color: #2c3e50;
+    font-size: 1.7em;
+}
+
+.hero p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.values h3,
+.team h3 {
+    font-size: 1.6em;
+    margin-top: 40px;
+    color: #2c3e50;
+}
+
+.values ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.values li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.team img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* =============== Адаптивность для мобильной версии =============== */
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+/* =============== Стили для страницы Услуги =============== */
+/* .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+} */
+
+
+/* =============== Страница: Авторизация =============== */
+.hero_login h2 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.login-form-section {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+.login-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e74c3c;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+}
+
+.form-footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 300px;
+    width: 80%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
+
+.active-link {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* ================ Личный кабинет ================== */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-logout {
+    padding: 6px 12px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #e0e0e0;
+}
+
+/* Секция возможностей — как на странице Новости */
+.features-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.feature-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.feature-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.feature-title-link:hover {
+    color: #e74c3c;
+    text-decoration: none;
+    /* ← подчёркивания нет */
+}
+
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .user-controls {
+        justify-content: flex-start;
+    }
+}
+
+/* =============== Страница одной новости =============== */
+
+.back-button-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.news-detail {
+    position: relative;
+    padding-top: 45px;
+}
+
+.back-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: background-color 0.2s;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-link:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
+}
+
+.news-detail h1 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #2c3e50;
+    padding-top: 5px;
+}
+
+/* =============== Бронирование переговорных =============== */
+.container h1 {
+    color: #2c3e50;
+}
+
+.time-slot.available {
+    background-color: #fff;
+    color: #333;
+}
+
+.time-slot.available:hover {
+    background-color: #e8f4f8;
+}
+
+.time-slot.booked-mine {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    cursor: pointer;
+}
+
+.time-slot.booked-mine:hover {
+    background-color: #c8e6c9;
+}
+
+.time-slot.booked-other {
+    background-color: #ffebee;
+    color: #c62828;
+    cursor: not-allowed;
+}
+
+/* Кнопка отмены */
+.btn-danger {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.booking-message {
+    padding: 12px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Расписание */
+.booking-schedule {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.schedule-header,
+.schedule-row {
+    display: grid;
+    grid-template-columns: 200px repeat(7, 1fr);
+    gap: 1px;
+    min-width: 1000px;
+}
+
+.schedule-date {
+    padding: 10px;
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #eee;
+}
+
+.schedule-room-name {
+    padding: 12px;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    border: 1px solid #eee;
+}
+
+.room-capacity {
+    font-size: 0.85em;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.schedule-day-slots {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.time-slot {
+    padding: 8px;
+    text-align: center;
+    font-size: 0.85em;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.time-slot.available:hover {
+    background-color: #e8f4f8;
+}
+
+.time-slot.booked {
+    background-color: #ffebee;
+    color: #c62828;
+    cursor: not-allowed;
+}
+
+.slot-user {
+    display: block;
+    font-size: 0.75em;
+    color: #c62828;
+    word-break: break-all;
+}
+
+.past-slot {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Модальное окно бронирования */
+.booking-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.booking-modal {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* =============== Выбор недели =============== */
+.week-selector {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.week-selector label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.week-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.week-selector select:focus {
+    outline: none;
+    border-color: #e74c3c;
+}
+
+
+
+.time-slot {
+    padding: 8px;
+    text-align: center;
+    font-size: 0.90em;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+    height: 40px;
+    /* Фиксированная высота */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slot-user {
+    display: block;
+    font-size: 0.90em;
+    color: #c62828;
+    word-break: break-all;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =============== Админка: Таблица сотрудников =============== */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.users-table th,
+.users-table td {
+    padding: 5px 5px;
+    border: 1px solid #cacaca;
+}
+
+.users-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    position: sticky;
+    top: 0;
+    font-size: 0.95em;
+}
+
+.users-table tr:hover {
+    background-color: #fafafa;
+}
+
+.users-table input[type="text"],
+.users-table input[type="email"],
+.users-table input[type="password"],
+.users-table input[type="date"],
+.users-table select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.users-table input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.users-table button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.users-table button+button {
+    margin-top: 4px;
+}
+
+/* =============== Администрирование - чекбоксы =============== */
+.form-group-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.form-group-checkbox label {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin: 0 !important;
+    font-weight: normal;
+    cursor: pointer;
+    color: #2c3e50;
+    font-weight: 600;
+}

@@ -1,0 +1,113 @@
+/* ========== хедер ========== */
+
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.company-name {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1.8em;
+  font-weight: bold;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.header-default .header-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 40%;
+  align-items: center;
+}
+
+.company-name:hover {
+  color: #e74c3c;
+}
+
+
+.header-default nav {
+  display: grid;
+  grid-template-areas:
+    "serviceslink track_orderlink feedbacklink";
+  gap: 20px;
+}
+
+.serviceslink {
+  grid-area: serviceslink;
+}
+
+.track_orderlink {
+  grid-area: track_orderlink;
+}
+
+.feedbacklink {
+  grid-area: feedbacklink;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  /* margin-right: 50px; */
+  font-weight: 500;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e74c3c;
+}
+
+
+
+
+
+.header-aboutcompany .header-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 16%;
+  align-items: center;
+}
+
+.header-aboutcompany nav {
+  display: grid;
+  grid-template-areas:
+    "aboutlink historylink whyuslink processlink";
+  grid-template-columns: 115px 130px 210px 265px;
+  gap: 25px;
+  place-items: center;
+  text-align: center;
+}
+
+.aboutlink {
+  grid-area: aboutlink;
+}
+
+.historylink {
+  grid-area: historylink;
+}
+
+.whyuslink {
+  grid-area: whyuslink;
+}
+
+.processlink {
+  grid-area: processlink;
+}
+
+.header-aboutcompany nav a {
+  text-decoration: none;
+  color: #555;
+  /* margin-right: 50px; */
+  font-weight: 500;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.header-aboutcompany nav a:hover {
+  color: #e74c3c;
+}

@@ -1,0 +1,253 @@
+/* src/components/LeftSidebar.css */
+.left-sidebar {
+  width: 15%;
+  height: 100vh;
+  /* Изменено на 100vh для фиксированной высоты */
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  /* Скрываем переполнение */
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 0;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  flex-shrink: 0;
+  min-height: 20%;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  background-color: #3498db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.user-role {
+  font-size: 0.85em;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+/* Навигация */
+.sidebar-nav {
+  flex: 1;
+  padding: 5px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  padding: 0 15px 0;
+  /* white-space: nowrap; */
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left-color: #3498db;
+}
+
+.nav-item.active .nav-link {
+  background-color: rgba(52, 152, 219, 0.2);
+  color: white;
+  border-left-color: #3498db;
+}
+
+.nav-text {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.nav-divider {
+  padding: 15px 20px 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+
+/* Футер боковой панели */
+.sidebar-footer {
+  height: 7%;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  padding: 12px;
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95em;
+}
+
+.logout-btn:hover {
+  background: rgba(231, 76, 60, 0.3);
+  border-color: #e74c3c;
+}
+
+.logout-icon {
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .left-sidebar {
+    width: 70px;
+  }
+
+  .logo-text,
+  .user-details,
+  .nav-text,
+  .logout-text,
+  .nav-divider {
+    display: none;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo-icon {
+    margin-right: 0;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  .nav-link {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .nav-icon {
+    margin-right: 0;
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-sidebar {
+    width: 100%;
+    height: 60px;
+    min-height: auto;
+    flex-direction: row;
+  }
+
+  .sidebar-header {
+    padding: 10px;
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 0;
+  }
+
+  .nav-link {
+    padding: 0 15px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-item.active .nav-link {
+    border-left: none;
+    border-bottom-color: #3498db;
+  }
+
+  .sidebar-footer {
+    padding: 10px;
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

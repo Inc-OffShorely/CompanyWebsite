@@ -1,0 +1,10 @@
+﻿=== КЛИЕНТСКАЯ ЧАСТЬ (FRONTEND) ===
+Фреймворк: React @testing-library/react@19.2.0
+React DOM: react-dom@19.2.0 
+React Router: react-router-dom@7.9.6
+Язык программирования: JavaScript (ES6+)
+Сборка: Create React App 
+Менеджер пакетов: npm 11.6.2
+Node.js: v24.11.1
+VS Code: 1.106.0
+Дополнительные библиотеки: React Router для навигации

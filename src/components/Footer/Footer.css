@@ -1,0 +1,96 @@
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-login {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #21303f;
+  color: #f0f0f0;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.footer-login-button {
+  display: inline-block;
+  padding: 3px;
+  background-color: #21303f;
+  color: #f0f0f0;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.footer-login-button:hover {
+  background-color: #1a2733;
+}
+
+.footer-login:hover {
+  background-color: #1a2733;
+}
+
+.footer-aboutcompany {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.footer-aboutcompany:hover {
+  color: #e74c3c;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+ul-name {
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+
+/* =============== Адаптивность для мобильной версии =============== */
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
