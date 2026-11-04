@@ -43,10 +43,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/api/room-bookings/**").authenticated()
                         .requestMatchers("/api/calendar/**").authenticated()
-                        // Логин и прочее, как было
-
+                        // ===== ВХОД =====
                         .requestMatchers("/api/auth/login").permitAll()
-                        .requestMatchers("/api/debug/**").permitAll()  // если у тебя есть
                         .requestMatchers(HttpMethod.DELETE, "/api/room-bookings/**").authenticated()
                         .requestMatchers(HttpMethod.GET, "/api/service-requests/**").authenticated()
                         .requestMatchers(HttpMethod.PUT, "/api/service-requests/*/take").hasRole("EMPLOYEE")
@@ -82,7 +80,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/api/calendar/**").authenticated()
                         .requestMatchers(HttpMethod.POST, "/api/calendar/**").authenticated()
 
-                        // ===== остальное, как у тебя было =====
+                        // ===== ТЕХПОДДЕРЖКА И СОТРУДНИКИ =====
                         .requestMatchers("/api/support-tickets/**").authenticated()
                         .requestMatchers("/api/employees/**").hasRole("ADMIN")
 
